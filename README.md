@@ -1,11 +1,14 @@
 # omni-extension-flipbook
 
-An extension for omnitool that adds a pseudo-3d flipbook based on the excellent [https://github.com/ts1/flipbook-vue] module.
+An extension for omnitool that adds a pseudo-3d flipbook based on the excellent [Vue Flipbook](https://github.com/ts1/flipbook-vue) module.
 
 This extension adds
 
 * A flipbook UI for browsing image sets
 * A /createFlipbook chat command that turns all image results in the current chat into a browsable flipbook.
+
+[!image.png]
+
 
 ## Installation
 
