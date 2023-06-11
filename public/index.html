@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html, body { margin: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+      #app
+      {
+        background-image: url('../../amy.png');
+        background-size:cover;
+        width: 100vw;
+        height: 100vh;
+      }
+      .flipbook {
+        backdrop-filter: blur(45px);
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"  :style="{ backgroundImage: 'url(' + images[0]  ')' }">
+
+      <flipbook class="flipbook" :pages="images" />
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/flipbook-vue"></script>
+    <script>
+
+
+      const { createApp, ref } = Vue
+
+
+      const app = createApp({ setup() {
+
+        const images = ref({
+        background: '',
+        flipbook: []
+      })
+
+      const urlParams = new URLSearchParams(window.location.search)
+        // Extract the key from the URL parameters
+      const key = urlParams.get('images')
+      if (key) {
+        // Retrieve the images from the sessionStorage and parse them into an object
+
+        // Assign the stored images to the images object
+        images.value = JSON.parse(key)
+      }
+        return {         images }        }})
+      app.component('Flipbook', Flipbook)
+      app.mount('#app')
+    </script>
+  </body>
+</html>
