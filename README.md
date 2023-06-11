@@ -23,4 +23,5 @@ Delete the omni-extension-flipbook folder from the server's extension folder.
 
 * Support for small / large resolutions
 * Install a flipbook button in the Chat Window.
+* Make the results externally shareable with optional user / omnitool watermark.
 
