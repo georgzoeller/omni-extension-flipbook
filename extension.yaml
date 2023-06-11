@@ -1,4 +1,5 @@
-title: Flipbook Extensions
+title: Flipbook Extension
 version: 0.0.1
-description: A pseudo 3d Flipbook extension for Omnitool using the excellent flipbook-vue
+description: An a pseudo-3d flipbook based on the excellent [Vue Flipbook](https://github.com/ts1/flipbook-vue) to browse through image generations.
 author: Georg Zoeller
+origin: https://github.com/georgzoeller/omni-extension-flipbook
