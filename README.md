@@ -7,7 +7,7 @@ This extension adds
 * A flipbook UI for browsing image sets
 * A /createFlipbook chat command that turns all image results in the current chat into a browsable flipbook.
 
-[!image.png]
+[!./image.png]
 
 
 ## Installation
