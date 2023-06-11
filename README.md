@@ -21,6 +21,7 @@ Delete the omni-extension-flipbook folder from the server's extension folder.
 
 ## Planned features
 
+* Audio Support, play audio files if created alongside images for a better picture book experience
 * Support for small / large resolutions
 * Install a flipbook button in the Chat Window.
 * Make the results externally shareable with optional user / omnitool watermark.
