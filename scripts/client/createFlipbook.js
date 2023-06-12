@@ -1,20 +1,21 @@
+function createScript()
+{
+  return {
+    description: "Create a flipbook from the current chat",
+    exec(args){
 
-const script = {
+      let images = [];
+        window.client.chat.state.messages.forEach((msg) => {
+          if (msg.attachments && msg.images && msg.images.length > 0) {
+            images= images.concat(msg.images.map((img) => {
+              return img.url
+            }))
+          }
+        })
 
-  exec(args){
+        window.open(`./extensions/omni-extension-flipbook/?images=${encodeURIComponent(JSON.stringify(images))}`, '_blank', 'popup=1,toolbar=0,location=0,menubar=0');
 
-    let images = [];
-      window.client.chat.state.messages.forEach((msg) => {
-        if (msg.attachments && msg.images && msg.images.length > 0) {
-          images= images.concat(msg.images.map((img) => {
-            return img.url
-          }))
-        }
-      })
-
-      window.open(`./extensions/omni-extension-flipbook/?images=${encodeURIComponent(JSON.stringify(images))}`, '_blank', 'popup=1,toolbar=0,location=0,menubar=0');
-
-
-      return {response: "ok"};
+        return {response: "ok"};
+    }
   }
 }
