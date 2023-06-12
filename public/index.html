@@ -9,7 +9,7 @@
       }
       #app
       {
-        background-image: url('../../amy.png');
+        background-color: black;
         background-size:cover;
         width: 100vw;
         height: 100vh;
@@ -22,14 +22,12 @@
     </style>
   </head>
   <body>
-    <div id="app"  :style="{ backgroundImage: 'url(' + images[0]  ')' }">
-
+    <div id="app"  :style="{ background-mage: 'url(' + images[0]  ')' }">
       <flipbook class="flipbook" :pages="images" />
     </div>
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://unpkg.com/flipbook-vue"></script>
     <script>
-
 
       const { createApp, ref } = Vue
 
