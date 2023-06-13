@@ -11,7 +11,9 @@ This extension adds
 
 ## Installation
 
-In the omnitool server's extension folder, run ```git clone https://github.com/georgzoeller/omni-extensions-flipbook```
+As a server admin, type ```/extensions install https://github.com/georgzoeller/omni-extensions-flipbook``` into the chat window.
+
+alternatively you can, in the omnitool server's extension folder, run ```git clone https://github.com/georgzoeller/omni-extensions-flipbook```
 
 
 ## Removal
