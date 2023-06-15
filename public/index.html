@@ -39,14 +39,12 @@
         flipbook: []
       })
 
-      const urlParams = new URLSearchParams(window.location.search)
-        // Extract the key from the URL parameters
-      const key = urlParams.get('images')
-      if (key) {
-        // Retrieve the images from the sessionStorage and parse them into an object
 
-        // Assign the stored images to the images object
-        images.value = JSON.parse(key)
+      const args = new URLSearchParams(location.search)
+      const params = JSON.parse(args.get('q'))
+
+      if (params.images) {
+        images.value = params.images
       }
         return {         images }        }})
       app.component('Flipbook', Flipbook)

@@ -13,8 +13,7 @@ function createScript()
             }))
           }
         })
-        window.client.workbench.activeExtensionUrl=`./extensions/omni-extension-flipbook/?images=${encodeURIComponent(JSON.stringify(images))}`;
-        window.client.workbench.activeScreen= "extensions";
+        window.client.workbench.showExtension("omni-extension-flipbook", {images: images});
         //window.open(`./extensions/omni-extension-flipbook/?images=${encodeURIComponent(JSON.stringify(images))}`, '_blank', 'popup=1,toolbar=0,location=0,menubar=0');
         window.client.sendSystemMessage(`Flipbook created, please check the extensions tab`, "text/markdown",
         {
@@ -27,7 +26,7 @@ function createScript()
             }
           ]
         });
-        return {response: "ok"};
+        return true;
     }
   }
 }
